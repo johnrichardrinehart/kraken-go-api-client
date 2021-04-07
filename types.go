@@ -109,80 +109,7 @@ type TimeResponse struct {
 }
 
 // AssetPairsResponse includes asset pair informations
-type AssetPairsResponse struct {
-	ADACAD   AssetPairInfo
-	AAVEUSD  AssetPairInfo
-	ADAETH   AssetPairInfo
-	ADAEUR   AssetPairInfo
-	ADAUSD   AssetPairInfo
-	ADAXBT   AssetPairInfo
-	BCHEUR   AssetPairInfo
-	BCHUSD   AssetPairInfo
-	BCHXBT   AssetPairInfo
-	DASHEUR  AssetPairInfo
-	DASHUSD  AssetPairInfo
-	DASHXBT  AssetPairInfo
-	EOSETH   AssetPairInfo
-	EOSEUR   AssetPairInfo
-	EOSUSD   AssetPairInfo
-	EOSXBT   AssetPairInfo
-	GNOETH   AssetPairInfo
-	GNOEUR   AssetPairInfo
-	GNOUSD   AssetPairInfo
-	GNOXBT   AssetPairInfo
-	QTUMCAD  AssetPairInfo
-	QTUMETH  AssetPairInfo
-	QTUMEUR  AssetPairInfo
-	QTUMUSD  AssetPairInfo
-	QTUMXBT  AssetPairInfo
-	USDTZUSD AssetPairInfo
-	XETCXETH AssetPairInfo
-	XETCXXBT AssetPairInfo
-	XETCZEUR AssetPairInfo
-	XETCZUSD AssetPairInfo
-	XETHXXBT AssetPairInfo
-	XETHZCAD AssetPairInfo
-	XETHZEUR AssetPairInfo
-	XETHZGBP AssetPairInfo
-	XETHZJPY AssetPairInfo
-	XETHZUSD AssetPairInfo
-	XICNXETH AssetPairInfo
-	XICNXXBT AssetPairInfo
-	XLTCXXBT AssetPairInfo
-	XLTCZEUR AssetPairInfo
-	XLTCZUSD AssetPairInfo
-	XMLNXETH AssetPairInfo
-	XMLNXXBT AssetPairInfo
-	XREPXETH AssetPairInfo
-	XREPXXBT AssetPairInfo
-	XREPZEUR AssetPairInfo
-	XREPZUSD AssetPairInfo
-	XTZCAD   AssetPairInfo
-	XTZETH   AssetPairInfo
-	XTZEUR   AssetPairInfo
-	XTZUSD   AssetPairInfo
-	XTZXBT   AssetPairInfo
-	XXBTZCAD AssetPairInfo
-	XXBTZEUR AssetPairInfo
-	XXBTZGBP AssetPairInfo
-	XXBTZJPY AssetPairInfo
-	XXBTZUSD AssetPairInfo
-	XXDGXXBT AssetPairInfo
-	XXLMXXBT AssetPairInfo
-	XXLMZEUR AssetPairInfo
-	XXLMZUSD AssetPairInfo
-	XXMRXXBT AssetPairInfo
-	XXMRZEUR AssetPairInfo
-	XXMRZUSD AssetPairInfo
-	XXRPXXBT AssetPairInfo
-	XXRPZCAD AssetPairInfo
-	XXRPZEUR AssetPairInfo
-	XXRPZJPY AssetPairInfo
-	XXRPZUSD AssetPairInfo
-	XZECXXBT AssetPairInfo
-	XZECZEUR AssetPairInfo
-	XZECZUSD AssetPairInfo
-}
+type AssetPairsResponse map[string]AssetPairInfo
 
 // AssetPairInfo represents asset pair information
 type AssetPairInfo struct {
@@ -219,43 +146,11 @@ type AssetPairInfo struct {
 	// Stop-out/Liquidation margin level
 	MarginStop int `json:"margin_stop"`
 	// Order minimum
-	OrderMin float64 `json:"ordermin"`
+	OrderMin string `json:"ordermin"`
 }
 
 // AssetsResponse includes asset informations
-type AssetsResponse struct {
-	ADA  AssetInfo
-	AAVE AssetInfo
-	BCH  AssetInfo
-	DASH AssetInfo
-	EOS  AssetInfo
-	GNO  AssetInfo
-	KFEE AssetInfo
-	QTUM AssetInfo
-	USDT AssetInfo
-	XDAO AssetInfo
-	XETC AssetInfo
-	XETH AssetInfo
-	XICN AssetInfo
-	XLTC AssetInfo
-	XMLN AssetInfo
-	XNMC AssetInfo
-	XREP AssetInfo
-	XXBT AssetInfo
-	XXDG AssetInfo
-	XXLM AssetInfo
-	XXMR AssetInfo
-	XXRP AssetInfo
-	XTZ  AssetInfo
-	XXVN AssetInfo
-	XZEC AssetInfo
-	ZCAD AssetInfo
-	ZEUR AssetInfo
-	ZGBP AssetInfo
-	ZJPY AssetInfo
-	ZKRW AssetInfo
-	ZUSD AssetInfo
-}
+type AssetsResponse map[string]AssetInfo
 
 // AssetInfo represents an asset information
 type AssetInfo struct {
@@ -413,81 +308,7 @@ type TradeVolumeResponse struct {
 }
 
 // TickerResponse includes the requested ticker pairs
-type TickerResponse struct {
-	ADACAD   PairTickerInfo
-	ADAETH   PairTickerInfo
-	ADAEUR   PairTickerInfo
-	ADAUSD   PairTickerInfo
-	ADAXBT   PairTickerInfo
-	AAVEUSD  PairTickerInfo
-	BCHEUR   PairTickerInfo
-	BCHUSD   PairTickerInfo
-	BCHXBT   PairTickerInfo
-	DASHEUR  PairTickerInfo
-	DASHUSD  PairTickerInfo
-	DASHXBT  PairTickerInfo
-	EOSETH   PairTickerInfo
-	EOSEUR   PairTickerInfo
-	EOSUSD   PairTickerInfo
-	EOSXBT   PairTickerInfo
-	GNOETH   PairTickerInfo
-	GNOEUR   PairTickerInfo
-	GNOUSD   PairTickerInfo
-	GNOXBT   PairTickerInfo
-	QTUMCAD  PairTickerInfo
-	QTUMETH  PairTickerInfo
-	QTUMEUR  PairTickerInfo
-	QTUMUSD  PairTickerInfo
-	QTUMXBT  PairTickerInfo
-	USDTZUSD PairTickerInfo
-	XBTUSDT  PairTickerInfo
-	XETCXETH PairTickerInfo
-	XETCXXBT PairTickerInfo
-	XETCZEUR PairTickerInfo
-	XETCZUSD PairTickerInfo
-	XETHXXBT PairTickerInfo
-	XETHZCAD PairTickerInfo
-	XETHZEUR PairTickerInfo
-	XETHZGBP PairTickerInfo
-	XETHZJPY PairTickerInfo
-	XETHZUSD PairTickerInfo
-	XICNXETH PairTickerInfo
-	XICNXXBT PairTickerInfo
-	XLTCXXBT PairTickerInfo
-	XLTCZEUR PairTickerInfo
-	XLTCZUSD PairTickerInfo
-	XMLNXETH PairTickerInfo
-	XMLNXXBT PairTickerInfo
-	XREPXETH PairTickerInfo
-	XREPXXBT PairTickerInfo
-	XREPZEUR PairTickerInfo
-	XREPZUSD PairTickerInfo
-	XXBTZCAD PairTickerInfo
-	XXBTZEUR PairTickerInfo
-	XXBTZGBP PairTickerInfo
-	XXBTZJPY PairTickerInfo
-	XXBTZUSD PairTickerInfo
-	XXDGXXBT PairTickerInfo
-	XXLMXXBT PairTickerInfo
-	XXLMZEUR PairTickerInfo
-	XXLMZUSD PairTickerInfo
-	XXMRXXBT PairTickerInfo
-	XXMRZEUR PairTickerInfo
-	XXMRZUSD PairTickerInfo
-	XXRPXXBT PairTickerInfo
-	XXRPZCAD PairTickerInfo
-	XXRPZEUR PairTickerInfo
-	XXRPZJPY PairTickerInfo
-	XXRPZUSD PairTickerInfo
-	XTZCAD   PairTickerInfo
-	XTZETH   PairTickerInfo
-	XTZEUR   PairTickerInfo
-	XTZUSD   PairTickerInfo
-	XTZXBT   PairTickerInfo
-	XZECXXBT PairTickerInfo
-	XZECZEUR PairTickerInfo
-	XZECZUSD PairTickerInfo
-}
+type TickerResponse map[string]PairTickerInfo
 
 // DepositAddressesResponse is the response type of a DepositAddresses query to the Kraken API.
 type DepositAddressesResponse []struct {
